@@ -5,7 +5,7 @@ void Raytracer::Render() {
   // TODO: Implement!
 }
 
-int Raytracer::RayFindObstacle(
+HitType Raytracer::RayFindObstacle(
   const Vector3D& pov, const Vector3D& dir,
   double& hitDistance, int& hitIndex,
   Vector3D& hitLocation, Vector3D& hitNormal
@@ -53,8 +53,16 @@ int Raytracer::RayFindObstacle(
   return hitType;
 }
 
-Vector3D Raytracer::calculatePixel(Vector3D& pov, Vector3D& dir, int k) {
+Vector3D Raytracer::CalculatePixel(Vector3D& pov, Vector3D& dir, int k) {
   // TODO: Implement!
   Vector3D color;
+  double hitDistance = 1e6; // TODO: Define 1e6 as "infinity" somewhere in the math code
+  int hitIndex;
+  Vector3D hitLocation, hitNormal;
+  HitType hitType = RayFindObstacle(pov, dir, hitDistance, hitIndex, hitLocation, hitNormal);
+
+  // TODO: Implement pixel color calculation after finding an obstacle
+  //       See raytrace2.cpp:237
+
   return color;
 }

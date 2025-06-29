@@ -15,12 +15,12 @@ class Raytracer {
   private:
     Scene scene;
 
-    int RayFindObstacle(
+    HitType RayFindObstacle(
       const Vector3D& pov, const Vector3D& dir,
       double& hitDistance, int& hitIndex,
       Vector3D& hitLocation, Vector3D& hitNormal
     );
 
-    Vector3D calculatePixel(Vector3D& pov, Vector3D& dir, int k);
+    Vector3D CalculatePixel(Vector3D& pov, Vector3D& dir, int k);
 
 };
