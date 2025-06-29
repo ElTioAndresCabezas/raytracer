@@ -17,8 +17,7 @@ This program uses the following libraries made by others
 
 # TODOs
 - Implement raytracing
-- Implement scene JSON parsing
 
 ## Optional
-- Remove nlohmann's JSON for Modern C++ dependency and replace it with a custon JSON parser.
+- Remove nlohmann's JSON for Modern C++ dependency and replace it with a custom JSON parser.
 - Create tool to allow users to make raytracing scenes with a GUI
