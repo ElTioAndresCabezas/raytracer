@@ -1,0 +1,13 @@
+{
+  "configurations": [
+  {
+    "name": "Raytracer (spheres)",
+    "type": "lldb",
+    "request": "launch",
+    "program": "${workspaceFolder}/build/Debug/bin/Raytracer_main",
+    "args": ["${workspaceFolder}/scenes/spheres.json"],
+    "cwd": "${workspaceFolder}",
+    "preLaunchTask": "Debug Build"
+  }
+  ]
+}
