@@ -17,6 +17,7 @@ This program uses the following libraries made by others
 
 # TODOs
 - Implement raytracing
+- Document Scene JSON specification
 
 ## Optional
 - Remove nlohmann's JSON for Modern C++ dependency and replace it with a custom JSON parser.

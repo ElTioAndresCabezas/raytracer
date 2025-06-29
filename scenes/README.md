@@ -1,0 +1,1 @@
+TODO: Add documentation on how to write scene JSONs
