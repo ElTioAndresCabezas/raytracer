@@ -41,8 +41,13 @@ int Raytracer::RayFindObstacle(
 
     double d2 = plane->normal.Dot(pov);
     double distance = (d2 + plane->offset) / parallelPlaneToPov;
-    // TODO: Finish interpreting and writing this
-    //       See raytracer-bisqwit.cpp:197
+
+    if (distance < 1e-6 || distance >= hitDistance) continue;
+    hitType = HitType::PLANE;
+    hitIndex = i;
+    hitDistance = distance;
+    hitLocation = pov + (dir * hitDistance);
+    hitNormal = plane->normal;
   }
 
   return hitType;
